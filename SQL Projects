@@ -1,0 +1,19 @@
+#PROJECT 1:This project involves creating a table with a list of friends, their emails and birthdays
+CREATE TABLE friends (id INTEGER, name TEXT, birthday DATE);
+INSERT INTO friends (id, name, birthday)
+VALUES (1,'Jane Doe',1993-05-19),(2,'Ivana Sturdivant',1981-11-16), (3,'Afiya Whisby',1981-10-25);
+UPDATE friends
+set name = 'Jane Smith'
+WHERE id = 1;
+ALTER TABLE friends ADD COLUMN email;
+UPDATE friends
+set email = 'jdoe@example.com'
+WHERE id = 1;
+UPDATE friends
+set email = 'is@example.com'
+WHERE id = 2;
+UPDATE friends
+set email = 'aw@example.com'
+WHERE id = 3;
+DELETE FROM friends WHERE id = 1;
+SELECT*FROM friends;
