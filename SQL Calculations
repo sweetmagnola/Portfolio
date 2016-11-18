@@ -1,0 +1,9 @@
+#counting
+SELECT COUNT(*) FROM fake_apps;
+#group counting
+SELECT price, COUNT(*) FROM fake_apps
+GROUP BY price;
+#returns the name of max downloads from each category
+SELECT name, category, MAX(downloads) FROM fake_apps GROUP by category;
+#decimal places
+SELECT price, ROUND(AVG(downloads),2) from fake_apps GROUP by price;
